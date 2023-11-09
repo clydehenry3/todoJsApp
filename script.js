@@ -1,6 +1,13 @@
 const inputBox = document.getElementById("input-box");
 const listContainer = document.getElementById("list-container");
 
+inputBox.addEventListener("keydown", function (event) {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      addTask(); 
+    }
+  });
+
 function addTask() {
   if (inputBox.value === '') {
     alert("Enter your task first!");
